@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Africana on the Go</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBzpGLd3KmD9ZQYVfcwhM31g6I54oykj2g",
+        authDomain: "food-truck-a4956.firebaseapp.com",
+        databaseURL: "https://food-truck-a4956.firebaseio.com",
+        projectId: "food-truck-a4956",
+        storageBucket: "food-truck-a4956.appspot.com",
+        messagingSenderId: "879485148557"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="brand">Africana on the Go</div>
+    <div class="address-bar">LOCATION | Manhattan, NY 90210 </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Africana on the Go</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about-us">Our Story</a>
+                    </li>
+                    <li>
+                        <a href="/menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="/order-online">Order Online</a>
+                    </li>
+                    <li>
+                        <a href="/contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Sign In</strong> to order online
+                    </h2>
+                    <hr>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div>
+            <button 
+                class="btn btn-primary"
+                id="google-signin" 
+                onclick={loginWithGoogle()}
+            >
+                Sign In With Google
+            </button>
+            <button 
+                class="btn btn-primary"
+                id="signout" 
+                onclick={logoutUser()}
+
+            >
+                Sign Out
+            </button>
+        </div>
+        
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Plain Jollof Rice ~ $11.00</h4>
+            <p class="list-group-item-text"> Ingredients: long grain rice, tomatoes, tomato paste, onions, salt, chili peppers,  </p>
+            <p>nutmeg, ginger, scotch bonnet, cumin</p>
+            
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Fried Rice ~ $11:00</h4>
+            <p class="list-group-item-text"> Marinated, seasoned, and fried long grain rice </p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Chicken ~ $2.25</h4>
+            <p class="list-group-item-text"> </p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Goat ~ $3.25</h4>
+            <p class="list-group-item-text"> Stewed goat seasoned with various spices</p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Shrimp ~ $2.50</h4>
+            <p class="list-group-item-text"> Seasoned grilled shrimp</p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Vegetable ~ $6.00</h4>
+            <p class="list-group-item-text"> Yorúbà cuisine consisting of rich spinach stew, palm oil, and pepper</p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Puff Puff ~ $5.25</h4>
+            <p class="list-group-item-text"> Traditional African snack consisting of deep fried dough</p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Meat Pie ~ $5.50</h4>
+            <p class="list-group-item-text"> A moist, unique, and delicious pastry with a minced meat and potato filling </p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Suya ~ $5.25</h4>
+            <p class="list-group-item-text">  Spicy grilled and smoked chicken, a popular food in west Africa </p>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Jollof Rice with Chicken ~ $13.25</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Jollof Rice with Goat ~ $14.25</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Jollof Rice with Shrimp ~ $13.50</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Jollof Rice with Vegetable ~ $17.00</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Fried Rice with Chicken ~ $13.25</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Fried Rice with Goat ~ $14.250</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Fried Rice with Shrimp ~ $13.50</h4>
+            </div>
+            
+            <div class="list-group">
+            <h4 class="list-group-item-heading"> Fried Rice with Vegetable ~ $17.00</h4>
+            </div>
+                
+            <div class="clearfix"></div>
+                
+        </div>
+                </div>
+        </div>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Africana on the Go 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+    <script src="js/firebaseAuth.js"></script>
+</body>
+</html>
+
+    
+    

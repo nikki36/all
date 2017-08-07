@@ -1,0 +1,10 @@
+.img-responsive{
+    max-width: 700px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#img{
+    height:300px;
+    width:500px;
+}
