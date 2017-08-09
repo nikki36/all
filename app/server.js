@@ -44,6 +44,10 @@ app.get('/contact-us', function(request, response){
     response.render('contact-us.ejs')
 })
 
+app.get('/about-us', function(request, response){
+    response.render('about-us.ejs')
+})
+
 var port = process.env.PORT
 
 app.listen(port, function(){

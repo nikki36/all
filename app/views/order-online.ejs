@@ -92,28 +92,37 @@
                     </h2>
                     <hr>
                 </div>
-                
+                <center>
+                <div>
+                    <button 
+                        class="btn"
+                        id="google-signin" 
+                        onclick={loginWithGoogle()}
+                    >
+                        Sign In With Google
+                    </button>
+                    <button 
+                        class="btn"
+                        id="signout" 
+                        onclick={signOut()}
+        
+                    >
+                        Sign Out
+                    </button>
+                    
+                    <button class="btn">
+                        Order Now
+                    </button>
+                    
+                    
+                    
+                     <!-- <a href="/order-now"><button class="btn" id="order-now">Order Now</button></a> -->
+                </div>
+                </center>
                 <div class="clearfix"></div>
             </div>
         </div>
 
-        <div>
-            <button 
-                class="btn btn-primary"
-                id="google-signin" 
-                onclick={loginWithGoogle()}
-            >
-                Sign In With Google
-            </button>
-            <button 
-                class="btn btn-primary"
-                id="signout" 
-                onclick={logoutUser()}
-
-            >
-                Sign Out
-            </button>
-        </div>
         
 <div class="container">
     <div class="row">
@@ -200,18 +209,16 @@
             <div class="clearfix"></div>
                 
         </div>
-                </div>
+        </div>
         </div>
 
     
     <footer>
-        <div class="container">
+
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <p>Copyright &copy; Africana on the Go 2017</p>
                 </div>
-            </div>
-        </div>
     </footer>
 
     <!-- jQuery -->
