@@ -22,6 +22,10 @@ app.use(express.static('views'))
 // tell app where to find views folder
 app.set('views', __dirname + '/views')
 
+// Give the server access to the user input
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
 app.use(logger('dev'))
 
 app.get('/', function(request, response){
@@ -44,9 +48,10 @@ app.get('/contact-us', function(request, response){
     response.render('contact-us.ejs')
 })
 
-app.get('/about-us', function(request, response){
-    response.render('about-us.ejs')
+app.get('/order-now', function(request, response){
+    response.render('order-now.ejs')
 })
+
 
 var port = process.env.PORT
 
